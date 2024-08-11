@@ -47,10 +47,10 @@ def ma_model(train, season=False, m=1, num_predictions=12):
     return predictions
 
 
-def arma_model(train, test, to_plot=False, season=False, m=1):
+def arma_model(train, season=False, m=1):
     predictions = []
     for ts in train:
-        arma = pm.auto_arima(train[i], seasonal=season, stepwise=season, m=m, suppress_warnings=True,
+        arma = pm.auto_arima(ts, seasonal=season, stepwise=season, m=m, suppress_warnings=True,
                              error_action="ignore", max_order=None, trace=True, d=0)
         predictions.append(arma.predict(n_periods=12))
 
