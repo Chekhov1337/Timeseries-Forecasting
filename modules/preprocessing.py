@@ -3,15 +3,18 @@ from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 
 
-def read_tsf(path="cif_2016_dataset.ts", start=36, stop=46, test_split=12):
+def read_tsf(path="cif_2016_dataset.ts", start=36, stop=46):
     data, meta = load_from_tsf_file(path)
 
     x = data.series_value[start:stop].to_numpy()
+    return x
+
+def split_data(values, test_split=12):
     x_train = []
     x_test = []
 
     # Split training and test sets
-    for ts in x:
+    for ts in values:
         x_train.append(ts[:len(ts) - test_split])
         x_test.append(ts[:test_split])
 
@@ -30,6 +33,3 @@ def prepare_data(values):
         X.append([i])
         Y.append(scaled_values[i + 1])
     return np.array(X), np.array(Y), scaler
-
-
-read_tsf()

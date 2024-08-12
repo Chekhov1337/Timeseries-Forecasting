@@ -8,8 +8,8 @@ def holt_winters(train, start=109, end=120, seasonal_periods=12):
     predictions = list()
 
     for ts in train:
-        model = ExponentialSmoothing(ts, seasonal=None, seasonal_periods=seasonal_periods).fit()
-        predict = model.predict(strart=start, end=end)
+        model = ExponentialSmoothing(list(ts), seasonal=None, seasonal_periods=seasonal_periods).fit()
+        predict = model.predict(start=start, end=end)
         predictions.append(predict)
 
     return predictions

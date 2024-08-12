@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76b2ddbe-4ddd-4ad9-9d67-aea572f703ef" name="Changes" comment="Add ARIMA models">
-      <change afterPath="$PROJECT_DIR$/cif_2016_dataset.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/cif_2016_dataset.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modules/preprocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Timeseries Forecasting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Timeseries Forecasting.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="76b2ddbe-4ddd-4ad9-9d67-aea572f703ef" name="Changes" comment="file preprocessing">
+      <change afterPath="$PROJECT_DIR$/modules/stats.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules/preprocessing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +54,7 @@
     "Python.main.executor": "Run",
     "Python.models.executor": "Run",
     "Python.preprocessing.executor": "Run",
+    "Python.stats.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -133,13 +131,22 @@
       <option name="project" value="LOCAL" />
       <updated>1723103103695</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="file preprocessing">
+      <option name="closed" value="true" />
+      <created>1723377596702</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723377596702</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
     <MESSAGE value="test Hello World" />
     <MESSAGE value="Add ARIMA models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ARIMA models" />
+    <MESSAGE value="file preprocessing" />
+    <option name="LAST_COMMIT_MESSAGE" value="file preprocessing" />
   </component>
 </project>
