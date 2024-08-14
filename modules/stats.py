@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_percentage_error, root_mean_squared_error
 from tabulate import tabulate
+from datetime import datetime as dt
 
 
 def plot(original_values, predictions, test_values, label, start_n=1, save_to_file=False):
@@ -90,13 +91,23 @@ def metrics(predictions, test, print_tables=False):
 
     if print_tables:
         print('Average Metrics:')
-        print(tabulate(average_metrics, headers=['RMSE', 'R^2', 'MAPE', 'SMAPE'], tablefmt="rounded_outline", numalign='left'))
+        print(tabulate(average_metrics, headers=['RMSE', 'R^2', 'MAPE', 'SMAPE'], tablefmt="rounded_outline",
+                       numalign='left'))
         print('Metrics for each timeseries:')
         print(tabulate(metrics, headers=['RMSE', 'R^2', 'MAPE', 'SMAPE'], tablefmt="rounded_outline", numalign='left'))
 
-    # Create a DataFrame for the average metrics
     average_metrics_df = pd.DataFrame(average_metrics)
-    # Create a DataFrame to display the individual metrics
     metrics_df = pd.DataFrame(metrics)
 
     return metrics_df, average_metrics_df
+
+
+def calc_time(model):
+    def wrapper(*args, **kwargs):
+        start = dt.now()
+        res = model(*args, **kwargs)
+        end = dt.now()
+        print(f'Forecasting time: {end - start}')
+        return res
+
+    return wrapper

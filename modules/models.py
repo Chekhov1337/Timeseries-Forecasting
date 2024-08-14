@@ -1,9 +1,11 @@
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
+from modules.stats import calc_time
 import pmdarima as pm
 import statsmodels as sm
 import numpy as np
 
 
+@calc_time
 def holt_winters(train, start=109, end=120, seasonal_periods=12):
     predictions = list()
 
